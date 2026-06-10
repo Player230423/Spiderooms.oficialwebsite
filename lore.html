@@ -12,13 +12,13 @@
 
 <style>
 
-css id="8jlwm0"
+```css id="jlwm8j"
 body{
 
 margin:0;
 padding:0;
 
-background:url("backrooms.png");
+background-image:url("backrooms.png");
 
 background-size:cover;
 
@@ -32,23 +32,108 @@ font-family:monospace;
 
 color:white;
 
+overflow-x:hidden;
+
 }
+
+/* capa suave encima */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(20,20,20,0.25);
+
+pointer-events:none;
+
+}
+
+/* caja del lore */
 
 .container{
 
-background:rgba(0,0,0,0.35);
+position:relative;
+
+margin:60px auto;
+
+width:80%;
 
 padding:30px;
 
-margin:50px;
+background:rgba(40,40,40,0.18);
 
-border:2px solid darkred;
+border:1px solid rgba(255,255,255,0.1);
+
+border-radius:15px;
 
 backdrop-filter:blur(4px);
 
-border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
 
 }
+
+/* titulo */
+
+h1{
+
+font-size:60px;
+
+font-weight:normal;
+
+letter-spacing:5px;
+
+text-align:center;
+
+color:white;
+
+text-shadow:0 0 10px rgba(255,255,255,0.2);
+
+}
+
+/* texto */
+
+p{
+
+font-size:20px;
+
+line-height:1.8;
+
+color:rgba(255,255,255,0.85);
+
+}
+
+/* mensajes especiales */
+
+.warning{
+
+color:#d6d6d6;
+
+font-style:italic;
+
+opacity:0.7;
+
+margin-top:30px;
+
+text-align:center;
+
+}
+
+/* vibe tranquila */
+
+.glow{
+
+text-shadow:0 0 8px rgba(255,255,255,0.15);
+
+}
+
 
 h1{
 
