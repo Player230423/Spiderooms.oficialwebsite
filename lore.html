@@ -12,15 +12,15 @@
 
 <style>
 
+css id="8jlwm0"
 body{
-css id="1vjlwm"
 
 margin:0;
 padding:0;
 
-background-image:url("Spiderooms.png");
+background:url("backrooms.png");
 
-background-size:100% 100%;
+background-size:cover;
 
 background-position:center;
 
@@ -28,31 +28,40 @@ background-repeat:no-repeat;
 
 background-attachment:fixed;
 
-color:white;
-
 font-family:monospace;
 
-css id="jlwm7y"
-body::before{
+color:white;
 
-content:"";
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(0,0,0,0.45);
-
-backdrop-filter:blur(1px);
-
-pointer-events:none;
+overflow:hidden;
 
 }
-css id="jlwm5w"
+
+.container{
+
+margin:50px;
+
+padding:30px;
+
+background:rgba(0,0,0,0.35);
+
+border:2px solid darkred;
+
+backdrop-filter:blur(4px);
+
+border-radius:10px;
+
+}
+
+h1{
+
+color:red;
+
+font-size:60px;
+
+text-shadow:0 0 15px red;
+
+}
+
 body::after{
 
 content:"";
@@ -66,32 +75,20 @@ width:100%;
 height:100%;
 
 background:repeating-linear-gradient(
+
 0deg,
-rgba(255,255,255,0.03),
-rgba(255,255,255,0.03) 1px,
+
+rgba(255,255,255,0.02),
+
+rgba(255,255,255,0.02) 1px,
+
 transparent 1px,
+
 transparent 2px
+
 );
 
 pointer-events:none;
-
-}
-
-
-}
-css id="jlwm6x"
-.container{
-
-background:rgba(0,0,0,0.2);
-
-padding:30px;
-
-border:2px solid red;
-
-backdrop-filter:blur(3px);
-
-}
-
 
 }
 
