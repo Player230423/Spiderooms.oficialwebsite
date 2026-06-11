@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spiderooms Network</title>
+
+<style>
+
+body{
+
+margin:0;
+padding:0;
+
+background-image:url("Spiderooms.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+font-family:Arial,sans-serif;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+/* overlay */
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.35);
+
+z-index:0;
+
+}
+
+/* partículas */
+
+.particles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px);
+
+background-size:60px 60px;
+
+opacity:0.12;
+
+animation:moveParticles 30s linear infinite;
+
+z-index:1;
+
+}
+
+@keyframes moveParticles{
+
+from{
+
+transform:translateY(0px);
+
+}
+
+to{
+
+transform:translateY(-300px);
+
+}
+
+}
+
+/* contenido */
+
+.container{
+
+position:relative;
+
+z-index:2;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+text-align:center;
+
+}
+
+/* titulo */
+
+h1{
+
+font-size:70px;
+
+letter-spacing:8px;
+
+font-weight:normal;
+
+text-shadow:0 0 15px rgba(255,255,255,0.25);
+
+margin-bottom:10px;
+
+}
+
+/* subtitulo */
+
+.subtitle{
+
+font-size:22px;
+
+opacity:0.75;
+
+margin-bottom:50px;
+
+}
+
+/* botones */
+
+.buttons{
+
+display:grid;
+
+grid-template-columns:repeat(2,250px);
+
+gap:25px;
+
+}
+
+button{
+
+padding:20px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:15px;
+
+background:rgba(255,255,255,0.12);
+
+color:white;
+
+cursor:pointer;
+
+backdrop-filter:blur(4px);
+
+transition:0.3s;
+
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:rgba(255,255,255,0.25);
+
+}
+
+/* estado */
+
+.status{
+
+margin-top:50px;
+
+font-size:18px;
+
+opacity:0.6;
+
+line-height:1.8;
+
+}
+
+/* glow */
+
+.glow{
+
+animation:glow 4s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 5px rgba(255,255,255,0.1);
+
+}
+
+to{
+
+text-shadow:0 0 20px rgba(255,255,255,0.4);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="particles"></div>
+
+<div class="container">
+
+<h1 class="glow">
+
+SPIDEROOMS NETWORK
+
+</h1>
+
+<div class="subtitle">
+
+Connected universes. Unknown sectors. Endless doors.
+
+</div>
+
+<div class="buttons">
+
+<button onclick="window.location.href='sector.html'">
+
+🚪 SECTORS
+
+</button>
+
+<button>
+
+🕷️ ENTITIES
+
+</button>
+
+<button>
+
+👤 CHARACTERS
+
+</button>
+
+<button>
+
+📼 TRANSMISSIONS
+
+</button>
+
+<button>
+
+📺 SEASONS
+
+</button>
+
+<button>
+
+🌌 UNIVERSES
+
+</button>
+
+</div>
+
+<div class="status">
+
+SECTOR STATUS: STABLE<br>
+
+ACTIVE UNIVERSES: 12<br>
+
+ANOMALIES DETECTED: 3
+
+</div>
+
+</div>
+
+</body>
+
+</html>
