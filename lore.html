@@ -8,11 +8,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Spiderooms Lore</title>
+<title>Spiderooms</title>
 
 <style>
 
-css id="jlwm8j"
 body{
 
 margin:0;
@@ -28,53 +27,41 @@ background-repeat:no-repeat;
 
 background-attachment:fixed;
 
-font-family:monospace;
+font-family:Arial, sans-serif;
 
 color:white;
 
-overflow-x:hidden;
-
 }
 
-/* capa suave encima */
-
-content:"";
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background:rgba(20,20,20,0.25);
-
-pointer-events:none;
-
-}
-
-/* caja del lore */
+/* caja principal */
 
 .container{
 
-position:relative;
+width:80%;
 
 margin:60px auto;
 
-width:80%;
-
 padding:30px;
 
-background:rgba(40,40,40,0.18);
+background:rgba(0,0,0,0.25);
 
-border:1px solid rgba(255,255,255,0.1);
-
-border-radius:15px;
+border-radius:20px;
 
 backdrop-filter:blur(4px);
 
-box-shadow:0 0 20px rgba(0,0,0,0.4);
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+
+}
+
+/* logo */
+
+.logo{
+
+display:block;
+
+margin:auto;
+
+width:300px;
 
 }
 
@@ -82,15 +69,15 @@ box-shadow:0 0 20px rgba(0,0,0,0.4);
 
 h1{
 
+text-align:center;
+
 font-size:60px;
 
 font-weight:normal;
 
 letter-spacing:5px;
 
-text-align:center;
-
-color:white;
+margin-top:20px;
 
 text-shadow:0 0 10px rgba(255,255,255,0.2);
 
@@ -100,110 +87,63 @@ text-shadow:0 0 10px rgba(255,255,255,0.2);
 
 p{
 
-font-size:20px;
+font-size:22px;
 
 line-height:1.8;
 
-color:rgba(255,255,255,0.85);
+color:rgba(255,255,255,0.9);
 
 }
 
-/* mensajes especiales */
+/* frase */
 
-.warning{
-
-color:#d6d6d6;
-
-font-style:italic;
-
-opacity:0.7;
-
-margin-top:30px;
+.quote{
 
 text-align:center;
 
-}
+margin-top:40px;
 
-/* vibe tranquila */
+opacity:0.7;
 
-.glow{
-
-text-shadow:0 0 8px rgba(255,255,255,0.15);
+font-style:italic;
 
 }
 
+/* boton */
 
-h1{
+button{
 
-color:red;
+display:block;
 
-font-size:60px;
+margin:auto;
 
-text-shadow:0 0 15px red;
+margin-top:30px;
 
-}
+padding:15px 40px;
 
+font-size:18px;
 
-content:"";
+border:none;
 
-position:fixed;
+border-radius:10px;
 
-top:0;
-left:0;
+background:rgba(255,255,255,0.15);
 
-width:100%;
-height:100%;
+color:white;
 
-background:repeating-linear-gradient(
+cursor:pointer;
 
-0deg,
+backdrop-filter:blur(3px);
 
-rgba(255,255,255,0.02),
-
-rgba(255,255,255,0.02) 1px,
-
-transparent 1px,
-
-transparent 2px
-
-);
-
-pointer-events:none;
+transition:0.3s;
 
 }
 
+button:hover{
 
-}
+background:rgba(255,255,255,0.3);
 
-h1{
-
-color:red;
-
-font-size:50px;
-
-text-shadow:0 0 10px red;
-
-}
-
-p{
-
-font-size:20px;
-
-line-height:1.8;
-
-}
-
-.glitch{
-
-animation:flicker 1s infinite;
-
-}
-
-@keyframes flicker{
-
-0%{opacity:1;}
-50%{opacity:0.7;}
-100%{opacity:1;}
+transform:scale(1.05);
 
 }
 
@@ -215,39 +155,37 @@ animation:flicker 1s infinite;
 
 <div class="container">
 
-<h1 class="glitch">SPIDEROOMS</h1>
+<h1>SPIDEROOMS</h1>
 
 <p>
 
-Spiderooms es un multiverso extraño que proviene de una computadora
-conectado por puertas. anomalías y sectores que no deberían existir.
+Spiderooms es un multiverso conectado por puertas y sectores desconocidos.
 
-Algunas puertas llevan a mundos normales.
+Algunos lugares son tranquilos y silenciosos,
+mientras otros esconden anomalías y entidades extrañas.
 
-Otras...
-a lugares donde algo observa desde la oscuridad.
+Cada puerta lleva a algo diferente.
 
-Con el tiempo comenzaron a aparecer entidades, nuevas facciones
-  
-y nuevas zonas y con el tiempo se va descubriendo algo nuevo
-
-Y cada vez más personas comienzan a escuchar las transmisiones de la compañia factors
-de la "vida real"
+A veces puedes encontrar nuevos amigos.
+Otras veces...
+cosas que nadie comprende del todo.
 
 </p>
 
-<br>
+<p class="quote">
 
-<p style="color:red;">
-
-[WARNING]
-DO NOT TRUST EVERY DOOR.
+"Not every door leads to danger."
 
 </p>
+
+<button>
+
+ENTER THE MULTIVERSE
+
+</button>
 
 </div>
 
 </body>
 
 </html>
-
