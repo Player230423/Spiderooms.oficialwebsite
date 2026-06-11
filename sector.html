@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sector Tranquilo</title>
+
+<style>
+
+body{
+
+margin:0;
+padding:0;
+
+background-image:url("Spiderooms.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
+
+font-family:Arial,sans-serif;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+/* capa suave */
+
+.overlay{
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.2);
+
+}
+
+/* contenedor principal */
+
+.container{
+
+position:relative;
+
+z-index:2;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+text-align:center;
+
+}
+
+/* titulo */
+
+h1{
+
+font-size:60px;
+
+letter-spacing:6px;
+
+font-weight:normal;
+
+text-shadow:0 0 15px rgba(255,255,255,0.3);
+
+margin-bottom:10px;
+
+}
+
+/* descripcion */
+
+.desc{
+
+font-size:22px;
+
+opacity:0.8;
+
+margin-bottom:40px;
+
+}
+
+/* stickman */
+
+#player{
+
+width:180px;
+
+cursor:pointer;
+
+transition:0.15s;
+
+filter:drop-shadow(0 0 10px rgba(255,255,255,0.2));
+
+}
+
+/* efecto click */
+
+#player:active{
+
+transform:scale(0.9);
+
+}
+
+/* contador */
+
+.counter{
+
+margin-top:30px;
+
+font-size:28px;
+
+background:rgba(0,0,0,0.25);
+
+padding:15px 30px;
+
+border-radius:15px;
+
+backdrop-filter:blur(5px);
+
+}
+
+/* mensaje */
+
+.message{
+
+margin-top:20px;
+
+font-size:20px;
+
+opacity:0.7;
+
+height:30px;
+
+}
+
+/* glow */
+
+.glow{
+
+animation:glow 4s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 5px rgba(255,255,255,0.1);
+
+}
+
+to{
+
+text-shadow:0 0 20px rgba(255,255,255,0.4);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+<h1 class="glow">
+
+SECTOR TRANQUILO
+
+</h1>
+
+<div class="desc">
+
+A peaceful place between unknown doors.
+
+</div>
+
+<img id="player"
+
+src="https://upload.wikimedia.org/wikipedia/commons/3/32/Stickman.svg">
+
+<div class="counter">
+
+CLICKS:
+<span id="clicks">0</span>
+/ 10000000
+
+</div>
+
+<div class="message" id="message">
+
+The silence feels endless.
+
+</div>
+
+</div>
+
+<script>
+
+let clicks = 0;
+
+const clickText = document.getElementById("clicks");
+
+const message = document.getElementById("message");
+
+const player = document.getElementById("player");
+
+player.onclick = () => {
+
+clicks++;
+
+clickText.innerText = clicks;
+
+/* mensajes */
+
+if(clicks == 10){
+
+message.innerText = "The player noticed you.";
+
+}
+
+if(clicks == 50){
+
+message.innerText = "This place feels calm.";
+
+}
+
+if(clicks == 100){
+
+message.innerText = "Something moved far away.";
+
+}
+
+if(clicks == 500){
+
+message.innerText = "A door opened somewhere.";
+
+}
+
+if(clicks == 1000){
+
+message.innerText = "You hear soft echoes.";
+
+}
+
+if(clicks == 5000){
+
+message.innerText = "The spider is watching.";
+
+}
+
+if(clicks == 10000){
+
+message.innerText = "A hidden sector was discovered.";
+
+}
+
+if(clicks == 10000000){
+
+message.innerText = "THE MULTIVERSE RESPONDED.";
+
+}
+
+};
+
+</script>
+
+</body>
+
+</html>
