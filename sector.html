@@ -108,15 +108,6 @@ transform:translateY(-200px);
 }
 
 }
-<iframe width="0" height="0"
-
-src="https://www.youtube.com/embed/ABC123?autoplay=1&loop=1&playlist=mPwkZmgCGnQ&list=RDmPwkZmgCGnQ&start_radio=1"
-
-frameborder="0"
-
-allow="autoplay">
-
-</iframe>
 
 /* capa suave */
 
@@ -271,6 +262,18 @@ text-shadow:0 0 20px rgba(255,255,255,0.4);
 <div class="overlay"></div>
 
 <div class="container">
+  
+<button onclick="toggleMusic()" id="musicButton">
+
+🎵 Enable Ambience
+
+</button>
+
+<audio id="bgmusic" loop>
+
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=dark-ambient-atmosphere-11107.mp3" type="audio/mpeg">
+
+</audio>
 
 <h1 class="glow">
 
@@ -305,6 +308,18 @@ The silence feels endless.
 </div>
 
 <script>
+
+function toggleMusic(){
+
+const music = document.getElementById("bgmusic");
+
+const button = document.getElementById("musicButton");
+
+music.play();
+
+button.innerText = "🌌 Ambience Enabled";
+
+}
 
 let clicks = 0;
 
