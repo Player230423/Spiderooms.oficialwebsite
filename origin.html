@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Origin</title>
+
+<style>
+
+body{
+
+margin:0;
+padding:0;
+
+font-family:Arial,sans-serif;
+
+background:url("Spiderooms.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* overlay */
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.55);
+
+z-index:0;
+
+}
+
+/* partículas */
+
+.particles{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
+
+background-size:80px 80px;
+
+opacity:0.1;
+
+animation:particlesMove 40s linear infinite;
+
+z-index:1;
+
+}
+
+@keyframes particlesMove{
+
+from{
+
+transform:translateY(0px);
+
+}
+
+to{
+
+transform:translateY(-400px);
+
+}
+
+}
+
+/* contenido */
+
+.container{
+
+position:relative;
+
+z-index:2;
+
+max-width:1000px;
+
+margin:auto;
+
+padding:60px 20px;
+
+}
+
+/* titulo */
+
+.title{
+
+font-size:85px;
+
+text-align:center;
+
+letter-spacing:8px;
+
+font-weight:normal;
+
+text-shadow:0 0 20px rgba(255,255,255,0.4);
+
+margin-bottom:50px;
+
+}
+
+/* secciones */
+
+.section{
+
+background:rgba(255,255,255,0.08);
+
+padding:35px;
+
+border-radius:20px;
+
+margin-bottom:40px;
+
+backdrop-filter:blur(5px);
+
+transition:0.3s;
+
+}
+
+.section:hover{
+
+transform:scale(1.02);
+
+background:rgba(255,255,255,0.13);
+
+}
+
+/* subtitulo */
+
+.subtitle{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+}
+
+/* texto */
+
+.text{
+
+font-size:19px;
+
+line-height:1.9;
+
+opacity:0.85;
+
+}
+
+/* boton */
+
+.enter{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:70px;
+
+}
+
+button{
+
+padding:22px 60px;
+
+font-size:24px;
+
+border:none;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.1);
+
+color:white;
+
+cursor:pointer;
+
+transition:0.3s;
+
+backdrop-filter:blur(5px);
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:rgba(255,255,255,0.2);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="particles"></div>
+
+<div class="container">
+
+<div class="title">
+
+THE ORIGIN
+
+</div>
+
+<div class="section">
+
+<div class="subtitle">
+
+📼 The Fighters
+
+</div>
+
+<div class="text">
+
+Todo comenzó dentro de una vieja computadora. Un día, el dueño entró a una misteriosa página llamada The Fighters. Al principio parecía un simple juego de peleas con un stickman enmascarado con dos palos como ojos. Pero algo dentro de la página comenzó a corromperse.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="subtitle">
+
+🌌 Nacimiento de los Spiderooms
+
+</div>
+
+<div class="text">
+
+La página corrupta se descargó sola y se convirtió en un archivo bloqueado oculto en lo más profundo del sistema de la computadora. Con el tiempo, el archivo se transformó en una dimensión amarilla infinita llena de pasillos silenciosos, sectores tranquilos y espacios desconocidos. Ese lugar sería conocido más tarde como los Spiderooms.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="subtitle">
+
+🎭 Los Enmascarados
+
+</div>
+
+<div class="text">
+
+Dentro de los Spiderooms apareció el primer protector: el Player Enmascarado. Más tarde llegaron Spider Enmascarado, Oofy Enmascarado y Potato Enmascarado. El tiempo dentro de los Spiderooms era inestable, mezclando el pasado, presente y futuro al mismo tiempo.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="subtitle">
+
+🕷️ La Araña
+
+</div>
+
+<div class="text">
+
+La computadora eventualmente atrajo un extraño dibujo de una araña: un triángulo con un ojo vertical. Los Spiderooms transformaron el dibujo en un ser vivo con conciencia. Al principio, la Araña era pacífica y protegía el multiverso junto a los Enmascarados.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<div class="subtitle">
+
+👁️ La Corrupción
+
+</div>
+
+<div class="text">
+
+Un portal interdimensional se abrió y Dark Lord apareció. Después de formar una alianza con los Enmascarados, Dark Lord creó en secreto un misterioso líquido rojo capaz de corromper seres vivos. El líquido fue inyectado en la Araña, transformándola en una entidad peligrosa. La alianza se rompió y los Enmascarados se vieron obligados a enviar a la Araña corrupta lejos de los Spiderooms.
+
+</div>
+
+</div>
+
+<div class="enter">
+
+<button onclick="window.location.href='hub.html'">
+
+REGRESAR A LA RED
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
