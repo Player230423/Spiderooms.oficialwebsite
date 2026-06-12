@@ -8,77 +8,134 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Seasons</title>
+<title>Spiderooms Seasons</title>
 
 <style>
 
 body{
 
 margin:0;
-
 padding:40px;
-
-background:#111;
 
 font-family:Arial,sans-serif;
 
-color:white;
-
-background-image:url("Spiderooms.png");
+background:url("Spiderooms.png");
 
 background-size:cover;
 
+background-position:center;
+
 background-attachment:fixed;
 
+color:white;
+
 }
+
+/* overlay */
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+z-index:0;
+
+}
+
+/* contenido */
 
 .container{
 
-background:rgba(0,0,0,0.4);
+position:relative;
 
-padding:30px;
+z-index:2;
 
-border-radius:20px;
+max-width:1000px;
 
-backdrop-filter:blur(5px);
+margin:auto;
 
 }
+
+/* titulo */
 
 h1{
 
 text-align:center;
 
-font-size:70px;
+font-size:75px;
 
 font-weight:normal;
 
-letter-spacing:5px;
+letter-spacing:6px;
+
+text-shadow:0 0 15px rgba(255,255,255,0.35);
+
+margin-bottom:60px;
 
 }
+
+/* temporadas */
 
 .season{
 
-margin-top:40px;
-
-padding:20px;
-
 background:rgba(255,255,255,0.08);
 
-border-radius:15px;
+padding:30px;
+
+border-radius:20px;
+
+margin-bottom:35px;
+
+backdrop-filter:blur(5px);
+
+transition:0.3s;
 
 }
+
+.season:hover{
+
+transform:scale(1.02);
+
+background:rgba(255,255,255,0.13);
+
+}
+
+/* titulos */
 
 .title{
 
-font-size:35px;
+font-size:38px;
 
-margin-bottom:10px;
+margin-bottom:15px;
 
 }
 
-.episodes{
+/* texto */
+
+.desc{
 
 opacity:0.8;
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+/* episodios */
+
+.episodes{
+
+margin-top:20px;
+
+opacity:0.7;
 
 line-height:1.8;
 
@@ -90,17 +147,33 @@ line-height:1.8;
 
 <body>
 
+<div class="overlay"></div>
+
 <div class="container">
 
 <h1>SEASONS</h1>
 
 <div class="season">
 
-<div class="title">📼 Season 1</div>
+<div class="title">
+
+📼 Season 1
+
+</div>
+
+<div class="desc">
+
+The beginning of the Spiderooms universe. Strange sectors and unknown entities start appearing.
+
+</div>
 
 <div class="episodes">
 
-The beginning of the Spiderooms multiverse and the first explorations.
+Episode 1: The First Door<br>
+
+Episode 2: Endless Hallways<br>
+
+Episode 3: The Spider Appears
 
 </div>
 
@@ -108,11 +181,25 @@ The beginning of the Spiderooms multiverse and the first explorations.
 
 <div class="season">
 
-<div class="title">🌌 Season 2</div>
+<div class="title">
+
+🌌 Season 2
+
+</div>
+
+<div class="desc">
+
+New universes connect to the Spiderooms network. The anomalies become stronger.
+
+</div>
 
 <div class="episodes">
 
-New universes, sectors and mysterious anomalies appear.
+Episode 1: Connected Worlds<br>
+
+Episode 2: Sector Signals<br>
+
+Episode 3: Unknown Transmission
 
 </div>
 
@@ -120,11 +207,25 @@ New universes, sectors and mysterious anomalies appear.
 
 <div class="season">
 
-<div class="title">🕷️ Season 3</div>
+<div class="title">
+
+🕷️ Season 3
+
+</div>
+
+<div class="desc">
+
+POV starts suffering illusions caused by mysterious powers hidden inside the multiverse.
+
+</div>
 
 <div class="episodes">
 
-POV starts being affected by strange powers and illusions.
+Episode 1: False Reality<br>
+
+Episode 2: Red Aura<br>
+
+Episode 3: The Truth Behind The Vision
 
 </div>
 
