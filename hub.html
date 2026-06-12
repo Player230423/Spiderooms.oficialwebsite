@@ -1,4 +1,4 @@
-
+```html id="3"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,17 +17,15 @@ body{
 margin:0;
 padding:0;
 
-background-image:url("Spiderooms.png");
+font-family:Arial,sans-serif;
+
+background:url("Spiderooms.png");
 
 background-size:cover;
 
 background-position:center;
 
-background-repeat:no-repeat;
-
 background-attachment:fixed;
-
-font-family:Arial,sans-serif;
 
 overflow:hidden;
 
@@ -35,7 +33,7 @@ color:white;
 
 }
 
-/* overlay */
+/* overlay oscuro */
 
 .overlay{
 
@@ -47,7 +45,7 @@ left:0;
 width:100%;
 height:100%;
 
-background:rgba(0,0,0,0.35);
+background:rgba(0,0,0,0.45);
 
 z-index:0;
 
@@ -69,19 +67,19 @@ pointer-events:none;
 
 background-image:
 
-radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px);
+radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px);
 
-background-size:60px 60px;
+background-size:70px 70px;
 
-opacity:0.12;
+opacity:0.1;
 
-animation:moveParticles 30s linear infinite;
+animation:particlesMove 35s linear infinite;
 
 z-index:1;
 
 }
 
-@keyframes moveParticles{
+@keyframes particlesMove{
 
 from{
 
@@ -91,7 +89,47 @@ transform:translateY(0px);
 
 to{
 
-transform:translateY(-300px);
+transform:translateY(-400px);
+
+}
+
+}
+
+/* niebla */
+
+.fog{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:200%;
+height:200%;
+
+background:
+
+radial-gradient(rgba(255,255,255,0.03), transparent 70%);
+
+animation:fogMove 60s linear infinite;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+
+@keyframes fogMove{
+
+from{
+
+transform:translate(-10%,-10%);
+
+}
+
+to{
+
+transform:translate(0%,0%);
 
 }
 
@@ -117,21 +155,39 @@ height:100vh;
 
 text-align:center;
 
+padding:20px;
+
 }
 
 /* titulo */
 
-h1{
+.title{
 
-font-size:70px;
+font-size:85px;
 
 letter-spacing:8px;
 
 font-weight:normal;
 
-text-shadow:0 0 15px rgba(255,255,255,0.25);
+text-shadow:0 0 20px rgba(255,255,255,0.35);
 
-margin-bottom:10px;
+animation:glow 5s infinite alternate;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 8px rgba(255,255,255,0.15);
+
+}
+
+to{
+
+text-shadow:0 0 25px rgba(255,255,255,0.5);
+
+}
 
 }
 
@@ -139,55 +195,59 @@ margin-bottom:10px;
 
 .subtitle{
 
-font-size:22px;
+font-size:24px;
 
 opacity:0.75;
 
-margin-bottom:50px;
+margin-top:10px;
+
+margin-bottom:60px;
 
 }
 
 /* botones */
 
-.buttons{
+.grid{
 
 display:grid;
 
-grid-template-columns:repeat(2,250px);
+grid-template-columns:repeat(2,280px);
 
 gap:25px;
 
 }
 
+/* estilo botones */
+
 button{
 
-padding:20px;
+padding:22px;
 
-font-size:20px;
+font-size:22px;
 
 border:none;
 
-border-radius:15px;
+border-radius:18px;
 
-background:rgba(255,255,255,0.12);
+background:rgba(255,255,255,0.08);
 
 color:white;
 
 cursor:pointer;
 
-backdrop-filter:blur(4px);
+backdrop-filter:blur(5px);
 
 transition:0.3s;
 
-box-shadow:0 0 15px rgba(0,0,0,0.3);
+box-shadow:0 0 20px rgba(0,0,0,0.35);
 
 }
 
 button:hover{
 
-transform:scale(1.05);
+transform:scale(1.06);
 
-background:rgba(255,255,255,0.25);
+background:rgba(255,255,255,0.18);
 
 }
 
@@ -195,7 +255,7 @@ background:rgba(255,255,255,0.25);
 
 .status{
 
-margin-top:50px;
+margin-top:60px;
 
 font-size:18px;
 
@@ -205,25 +265,19 @@ line-height:1.8;
 
 }
 
-/* glow */
+/* responsive */
 
-.glow{
+@media(max-width:700px){
 
-animation:glow 4s infinite alternate;
+.title{
 
-}
-
-@keyframes glow{
-
-from{
-
-text-shadow:0 0 5px rgba(255,255,255,0.1);
+font-size:50px;
 
 }
 
-to{
+.grid{
 
-text-shadow:0 0 20px rgba(255,255,255,0.4);
+grid-template-columns:1fr;
 
 }
 
@@ -239,21 +293,23 @@ text-shadow:0 0 20px rgba(255,255,255,0.4);
 
 <div class="particles"></div>
 
+<div class="fog"></div>
+
 <div class="container">
 
-<h1 class="glow">
+<div class="title">
 
 SPIDEROOMS NETWORK
 
-</h1>
+</div>
 
 <div class="subtitle">
 
-Connected universes. Unknown sectors. Endless doors.
+Connected universes. Endless sectors. Unknown doors.
 
 </div>
 
-<div class="buttons">
+<div class="grid">
 
 <button onclick="window.location.href='sector.html'">
 
@@ -261,15 +317,15 @@ Connected universes. Unknown sectors. Endless doors.
 
 </button>
 
-<button>
-
-🕷️ ENTITIES
-
-</button>
-
 <button onclick="window.location.href='characters.html'">
 
 👤 CHARACTERS
+
+</button>
+
+<button onclick="window.location.href='seasons.html'">
+
+📺 SEASONS
 
 </button>
 
@@ -281,15 +337,13 @@ Connected universes. Unknown sectors. Endless doors.
 
 <button>
 
-<button onclick="window.location.href='seasons.html'">
-
-📺 SEASONS
+🌌 UNIVERSES
 
 </button>
 
-<button>
+<button onclick="window.location.href='lore.html'">
 
-🌌 UNIVERSES
+👁️ LORE
 
 </button>
 
@@ -299,9 +353,9 @@ Connected universes. Unknown sectors. Endless doors.
 
 SECTOR STATUS: STABLE<br>
 
-ACTIVE UNIVERSES: 12<br>
+ACTIVE UNIVERSES: 999997<br>
 
-ANOMALIES DETECTED: 3
+ANOMALIES DETECTED: 0
 
 </div>
 
